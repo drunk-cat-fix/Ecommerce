@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://47.239.86.236:3307/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: xiangyu183
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.murray.e_commencesystem.entities
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+  global-config:
+    db-config:
+      table-prefix: t_
+
+  type-aliases-package: com.murray.e_commercesystem.mapper
